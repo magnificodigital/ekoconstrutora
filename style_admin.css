@@ -1,0 +1,6 @@
+.add-new-h2,
+#find_detached,
+#wp-admin-bar-new-content,
+#wp-admin-bar-wp-logo { 
+	display:none;
+}

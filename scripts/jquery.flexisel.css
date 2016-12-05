@@ -1,0 +1,78 @@
+
+.clearout {
+height:20px;
+clear:both;
+}
+
+#flexiselDemo1, #flexiselDemo2, #flexiselDemo3 {
+display:none;
+}
+
+.nbs-flexisel-container {
+    position:relative;
+    max-width:100%;
+}
+.nbs-flexisel-ul {
+    position:relative;
+    width:9999px;
+    margin:0px;
+    padding:0px;
+    list-style-type:none;   
+    text-align:center;  
+}
+
+.nbs-flexisel-inner {
+    overflow:hidden;
+    /*float:left;
+    width:100%;*/
+    width: 90%;
+    margin: 0 auto;
+}
+
+.nbs-flexisel-item {
+    float:left;
+    margin:0px;
+    padding:0px;
+    cursor:pointer;
+    position:relative;
+    line-height:0px;
+}
+
+.nbs-flexisel-item:hover img {
+    background-color: #1b6f1b;
+    opacity: 0.8;
+    
+}
+
+.nbs-flexisel-item img {
+    padding: 1px;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width:240px;
+    max-height:180px;
+}
+
+/*** Navigation ***/
+
+.nbs-flexisel-nav-left,
+.nbs-flexisel-nav-right {
+    width: 30px;
+    height: 90px; 
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+    background-image: url(../images/sprit.png);
+}
+
+.nbs-flexisel-nav-left {
+    left: 10px;
+    background-position: -128px -55px
+}
+
+.nbs-flexisel-nav-right {
+    right: 5px;
+    background-position: -161px -55px;
+}
