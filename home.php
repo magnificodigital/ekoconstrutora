@@ -58,9 +58,14 @@ if ($banner_array)
 
 	{
 
+	
+		
 		$banner_image = wp_get_attachment_image_src( get_post_thumbnail_id($banner->ID), array(9999, 9999));
-
 		$banner_image = $banner_image[0];
+
+		$banner_image_desktop = get_field('banner_desktop',$banner->ID);
+		$banner_image_tablet = get_field('banner_tablet',$banner->ID);
+		$banner_image_mobile = get_field('banner_mobile',$banner->ID);
 
 
 
@@ -130,31 +135,65 @@ if ($banner_array)
 
 		<li>
 
-			<div class="homepage-bg" style="background: url(<?php echo $banner_image; ?>); background-size: cover;">
-
+			
+			<!--Desktop-->
+			<div class="homepage-bg desktop" style="background: url(<?php echo $banner_image_desktop; ?>); background-size: cover; background-position: center bottom;">
 				<div class="row">
-
 					<div class="six columns">
+						<?php
 
-						<div class="text">
-
+						/*<div class="text">
 							<p class="locale"><?= $banner_terms_locale ?></p>
-
 							<h2><?= $banner_title ?></h2>
-
 							<p class="room"><?= $banner_terms_rooms ?></p>
-
 							<p class="metreage"><?= $banner_terms_metreage ?></p>
-
 							<a href="<?= $banner_link ?>" class="btn">Conheça</a>
+						</div>*/
 
-						</div>
-
+						?>
 					</div>
-
 				</div>
-
 			</div>
+
+			<!--Tablet-->
+			<div class="homepage-bg tablet" style="background: url(<?php echo $banner_image_tablet; ?>); background-size: cover; background-position: center bottom;">
+				<div class="row">
+					<div class="six columns">
+						<?php
+
+						/*<div class="text">
+							<p class="locale"><?= $banner_terms_locale ?></p>
+							<h2><?= $banner_title ?></h2>
+							<p class="room"><?= $banner_terms_rooms ?></p>
+							<p class="metreage"><?= $banner_terms_metreage ?></p>
+							<a href="<?= $banner_link ?>" class="btn">Conheça</a>
+						</div>*/
+
+						?>
+					</div>
+				</div>
+			</div>
+
+			<!--Mobile-->
+			<div class="homepage-bg mobile" style="background: url(<?php echo $banner_image_mobile; ?>); background-size: cover; background-position: center bottom;">
+				<div class="row">
+					<div class="six columns">
+						<?php
+
+						/*<div class="text">
+							<p class="locale"><?= $banner_terms_locale ?></p>
+							<h2><?= $banner_title ?></h2>
+							<p class="room"><?= $banner_terms_rooms ?></p>
+							<p class="metreage"><?= $banner_terms_metreage ?></p>
+							<a href="<?= $banner_link ?>" class="btn">Conheça</a>
+						</div>*/
+
+						?>
+					</div>
+				</div>
+			</div>
+
+
 
 		</li>
 
@@ -327,6 +366,7 @@ wp_reset_postdata();
 												?>
 
 												<img src="<?php echo $img ?>" alt="" />
+
 
 											</a>
 
