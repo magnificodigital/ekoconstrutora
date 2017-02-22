@@ -256,7 +256,7 @@ function create_post_type_listings()
 				'all_items' => 'Todos os Imóveis'
 			),
 		'public' => true,
-		'rewrite' => array('slug' => 'imovel'),
+		'rewrite' => array('slug' => 'imovel', 'with_front' => false),
 		'has_archive' => true,		 
 		'supports' => array('title', 'editor', 'excerpt', 'custom-fields', 'thumbnail'),
 		'menu_position' => 6
