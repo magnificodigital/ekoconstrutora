@@ -31,6 +31,8 @@
         <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
         <meta property="og:image" content="<?php echo bloginfo('template_directory') . '/images/logo.gif'; ?>">
         <meta property="og:description" content="<?php echo (is_home()) ? bloginfo('description') : $meta_description;?>">
+        <meta name="description" content="<?php echo (is_home()) ? bloginfo('description') : $meta_description;?>">
+
         
         <!--
         <script src="javascripts/modernizr.foundation.js"></script>
