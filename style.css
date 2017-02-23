@@ -70,7 +70,7 @@
     background: none;
 }
 
-.single-listings .homepage-bg {
+.single-listings.homepage-bg {
     margin-top: -160px;
 }
 
@@ -363,7 +363,7 @@
 }
 
 #wrap #status .chart span.full {
-    background-color: #cccccc;
+    background-color: #001559;
 }
 
 #wrap #status .dates {

@@ -37,7 +37,7 @@ if (have_posts()) :
 	        }
 	    }
 ?>
-		<div class="homepage-bg" style="background: url(<?php echo $the_post_image; ?>); background-size: cover;">
+		<div class="single-listings homepage-bg" style="background: url(<?php echo $the_post_image; ?>); background-size: cover;">
 			<div class="row">
 				<div class="six columns">
 					<div class="text">

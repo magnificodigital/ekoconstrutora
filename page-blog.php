@@ -32,6 +32,7 @@
 				</div>
 				<div class="featured">
 					<?php echo (has_post_thumbnail()) ? get_the_post_thumbnail($post->ID, array(960,9999)) : ''; ?>
+					<?php //echo get_the_post_thumbnail(); ?>
 				</div>
 				<?php if($post->post_content != ''): ?>
 				<div class="post-content">
