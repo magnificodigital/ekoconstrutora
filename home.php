@@ -1,50 +1,24 @@
 <?php get_header();?>
-
 <?php include(TEMPLATEPATH . '/options.php'); ?>
-
 <?php
-
-
-
 $banner_image = '';
-
 $banner_terms = array();
-
 $banner_title = '';
-
 $banner_link  = '';
 
-
-
 $args = array(
-
 	'showposts'   	   => 3,
-
 	'offset'           => 0,
-
 	'orderby'          => 'post_date',
-
 	'order'            => 'DESC',
-
 	'post_type'        => 'listings',
-
 	'post_status'      => 'publish',
-
 	'suppress_filters' => true
-
 );
-
-
 
 $banner_array = get_posts( $args );
 
-
-
-if ($banner_array)
-
-{
-
-?>
+if ($banner_array) { ?>
 
 <div class="jcarousel-wrapper">
 
@@ -59,7 +33,6 @@ if ($banner_array)
 	{
 
 	
-		
 		$banner_image = wp_get_attachment_image_src( get_post_thumbnail_id($banner->ID), array(9999, 9999));
 		$banner_image = $banner_image[0];
 
@@ -70,19 +43,12 @@ if ($banner_array)
 
 
 		$banner_title = $banner->post_title;
-
 		$banner_link = get_bloginfo('url') . '\/imovel/' . $banner->post_name;
-
-
 
 		$banner_taxonomies = get_object_taxonomies('listings');
 
-
-
 		$banner_terms_locale = '';
-
     	$banner_terms_metreage = '';
-
     	$banner_terms_rooms = '';
 
 
@@ -93,64 +59,47 @@ if ($banner_array)
 
 	        $banner_terms = get_the_terms( $banner->ID, $banner_taxonomy );
 
-
-
 	        if ( !empty( $banner_terms ) )
-
 	        {
-
 	            foreach ( $banner_terms as $banner_term )
-
 	            {
-
 	                switch ($banner_term->taxonomy) {
-
 	                	case 'locale':
-
 	                		$banner_terms_locale = $banner_term->name;
-
 	                		break;
-
 	                	case 'metreage':
-
 	                		$banner_terms_metreage = $banner_term->name;
-
 	                		break;
-
 	                	case 'rooms':
-
 	                		$banner_terms_rooms = $banner_term->name;
-
 	                		break;
-
 	                }
-
 	            }
-
 	        }
-
 	    }
-
 ?>
 
-		<li>
 
-			
+
+		<li>	
 			<!--Desktop-->
 			<div class="homepage-bg desktop" style="background: url(<?php echo $banner_image_desktop; ?>); background-size: cover; background-position: center bottom;">
 				<div class="row">
 					<div class="six columns">
-						<?php
 
-						/*<div class="text">
+
+						<?php if ($banner->ID === 483 || $banner->ID === 116) { ?> 
+
+						<div class="text">
 							<p class="locale"><?= $banner_terms_locale ?></p>
 							<h2><?= $banner_title ?></h2>
 							<p class="room"><?= $banner_terms_rooms ?></p>
 							<p class="metreage"><?= $banner_terms_metreage ?></p>
 							<a href="<?= $banner_link ?>" class="btn">Conheça</a>
-						</div>*/
+						</div>
 
-						?>
+						<?php } ?>
+
 					</div>
 				</div>
 			</div>
@@ -159,17 +108,19 @@ if ($banner_array)
 			<div class="homepage-bg tablet" style="background: url(<?php echo $banner_image_tablet; ?>); background-size: cover; background-position: center bottom;">
 				<div class="row">
 					<div class="six columns">
-						<?php
 
-						/*<div class="text">
+						<?php if ($banner->ID === 483 || $banner->ID === 116) { ?> 
+
+						<div class="text">
 							<p class="locale"><?= $banner_terms_locale ?></p>
 							<h2><?= $banner_title ?></h2>
 							<p class="room"><?= $banner_terms_rooms ?></p>
 							<p class="metreage"><?= $banner_terms_metreage ?></p>
 							<a href="<?= $banner_link ?>" class="btn">Conheça</a>
-						</div>*/
+						</div>
 
-						?>
+						<?php } ?>
+
 					</div>
 				</div>
 			</div>
@@ -178,23 +129,22 @@ if ($banner_array)
 			<div class="homepage-bg mobile" style="background: url(<?php echo $banner_image_mobile; ?>); background-size: cover; background-position: center bottom;">
 				<div class="row">
 					<div class="six columns">
-						<?php
 
-						/*<div class="text">
+						<?php if ($banner->ID === 483 || $banner->ID === 116) { ?> 
+
+						<div class="text">
 							<p class="locale"><?= $banner_terms_locale ?></p>
 							<h2><?= $banner_title ?></h2>
 							<p class="room"><?= $banner_terms_rooms ?></p>
 							<p class="metreage"><?= $banner_terms_metreage ?></p>
 							<a href="<?= $banner_link ?>" class="btn">Conheça</a>
-						</div>*/
+						</div>
 
-						?>
+						<?php } ?>
+
 					</div>
 				</div>
 			</div>
-
-
-
 		</li>
 
 <?php
