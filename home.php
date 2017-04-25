@@ -7,7 +7,7 @@ $banner_title = '';
 $banner_link  = '';
 
 $args = array(
-	'showposts'   	   => 3,
+	'showposts'   	   => 5,
 	'offset'           => 0,
 	'orderby'          => 'post_date',
 	'order'            => 'DESC',
@@ -82,69 +82,74 @@ if ($banner_array) { ?>
 
 
 		<li>	
-			<!--Desktop-->
-			<div class="homepage-bg desktop" style="background: url(<?php echo $banner_image_desktop; ?>); background-size: cover; background-position: center bottom;">
-				<div class="row">
-					<div class="six columns">
+			<a href="<?php echo $banner_link; ?>">
+				<!--Desktop-->
+				<div class="homepage-bg desktop" style="background: url(<?php echo $banner_image_desktop; ?>); background-size: cover; background-position: center bottom;">
+					<div class="row">
+						<div class="six columns">
+
+							<?php if ($banner->ID === 483 || $banner->ID === 116) /*
 
 
-						<?php if ($banner->ID === 483 || $banner->ID === 116) { ?> 
+							<div class="text">
+								<p class="locale"><?= $banner_terms_locale ?></p>
+								<h2><?= $banner_title ?></h2>
+								<p class="room"><?= $banner_terms_rooms ?></p>
+								<p class="metreage"><?= $banner_terms_metreage ?></p>
+								<a href="<?= $banner_link ?>" class="btn">Conheça</a>
+							</div>
 
-						<div class="text">
-							<p class="locale"><?= $banner_terms_locale ?></p>
-							<h2><?= $banner_title ?></h2>
-							<p class="room"><?= $banner_terms_rooms ?></p>
-							<p class="metreage"><?= $banner_terms_metreage ?></p>
-							<a href="<?= $banner_link ?>" class="btn">Conheça</a>
+							} */ ?>
+
 						</div>
-
-						<?php } ?>
-
 					</div>
 				</div>
-			</div>
+			</a>
 
-			<!--Tablet-->
-			<div class="homepage-bg tablet" style="background: url(<?php echo $banner_image_tablet; ?>); background-size: cover; background-position: center bottom;">
-				<div class="row">
-					<div class="six columns">
+			<a href="<?php echo $banner_link; ?>">
+				<!--Tablet-->
+				<div class="homepage-bg tablet" style="background: url(<?php echo $banner_image_tablet; ?>); background-size: cover; background-position: center bottom;">
+					<div class="row">
+						<div class="six columns">
 
-						<?php if ($banner->ID === 483 || $banner->ID === 116) { ?> 
+							<?php /*if ($banner->ID === 483 || $banner->ID === 116) { 
 
-						<div class="text">
-							<p class="locale"><?= $banner_terms_locale ?></p>
-							<h2><?= $banner_title ?></h2>
-							<p class="room"><?= $banner_terms_rooms ?></p>
-							<p class="metreage"><?= $banner_terms_metreage ?></p>
-							<a href="<?= $banner_link ?>" class="btn">Conheça</a>
+							<div class="text">
+								<p class="locale"><?= $banner_terms_locale ?></p>
+								<h2><?= $banner_title ?></h2>
+								<p class="room"><?= $banner_terms_rooms ?></p>
+								<p class="metreage"><?= $banner_terms_metreage ?></p>
+								<a href="<?= $banner_link ?>" class="btn">Conheça</a>
+							</div>
+
+							} */?>
+
 						</div>
-
-						<?php } ?>
-
 					</div>
 				</div>
-			</div>
+			</a>
 
-			<!--Mobile-->
-			<div class="homepage-bg mobile" style="background: url(<?php echo $banner_image_mobile; ?>); background-size: cover; background-position: center bottom;">
-				<div class="row">
-					<div class="six columns">
+			<a href="<?php echo $banner_link; ?>">
+				<!--Mobile-->
+				<div class="homepage-bg mobile" style="background: url(<?php echo $banner_image_mobile; ?>); background-size: cover; background-position: center bottom;">
+					<div class="row">
+						<div class="six columns">
 
-						<?php if ($banner->ID === 483 || $banner->ID === 116) { ?> 
+							<?php /*if ($banner->ID === 483 || $banner->ID === 116) { 
+							<div class="text">
+								<p class="locale"><?= $banner_terms_locale ?></p>
+								<h2><?= $banner_title ?></h2>
+								<p class="room"><?= $banner_terms_rooms ?></p>
+								<p class="metreage"><?= $banner_terms_metreage ?></p>
+								<a href="<?= $banner_link ?>" class="btn">Conheça</a>
+							</div>
 
-						<div class="text">
-							<p class="locale"><?= $banner_terms_locale ?></p>
-							<h2><?= $banner_title ?></h2>
-							<p class="room"><?= $banner_terms_rooms ?></p>
-							<p class="metreage"><?= $banner_terms_metreage ?></p>
-							<a href="<?= $banner_link ?>" class="btn">Conheça</a>
+							 }*/ ?>
+
 						</div>
-
-						<?php } ?>
-
 					</div>
 				</div>
-			</div>
+			</a>
 		</li>
 
 <?php
