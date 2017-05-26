@@ -25,7 +25,69 @@ if ($banner_array) { ?>
 <div class="jcarousel">
 
 <ul class="banners">
+		<li>
+			<a href="http://ibisaruja.com.br">
+				<!--Desktop-->
+				<div class="homepage-bg desktop" style="background: url('http://www.ekoconstrutora.com.br/wp-content/uploads/2017/05/banner-min.jpg'); background-size: cover; background-position: center bottom;">
+					<div class="row">
+						<div class="six columns">
 
+							<?php if ($banner->ID === 483 || $banner->ID === 116) /*
+
+
+							<div class="text">
+								<p class="locale"><?= $banner_terms_locale ?></p>
+								<h2><?= $banner_title ?></h2>
+								<p class="room"><?= $banner_terms_rooms ?></p>
+								<p class="metreage"><?= $banner_terms_metreage ?></p>
+								<a href="<?= $banner_link ?>" class="btn">Conheça</a>
+							</div>
+
+							} */ ?>
+
+						</div>
+					</div>
+				</div>
+				<!--Tablet-->
+				<div class="homepage-bg tablet" style="background: url('http://www.ekoconstrutora.com.br/wp-content/uploads/2017/05/tablet.jpg'); background-size: cover; background-position: center bottom;">
+					<div class="row">
+						<div class="six columns">
+
+							<?php /*if ($banner->ID === 483 || $banner->ID === 116) { 
+
+							<div class="text">
+								<p class="locale"><?= $banner_terms_locale ?></p>
+								<h2><?= $banner_title ?></h2>
+								<p class="room"><?= $banner_terms_rooms ?></p>
+								<p class="metreage"><?= $banner_terms_metreage ?></p>
+								<a href="<?= $banner_link ?>" class="btn">Conheça</a>
+							</div>
+
+							} */?>
+
+						</div>
+					</div>
+				</div>
+				<div class="homepage-bg mobile" style="background: url('http://www.ekoconstrutora.com.br/wp-content/uploads/2017/05/mobile.jpg'); background-size: cover; background-position: center bottom;">
+					<div class="row">
+						<div class="six columns">
+
+							<?php /*if ($banner->ID === 483 || $banner->ID === 116) { 
+							<div class="text">
+								<p class="locale"><?= $banner_terms_locale ?></p>
+								<h2><?= $banner_title ?></h2>
+								<p class="room"><?= $banner_terms_rooms ?></p>
+								<p class="metreage"><?= $banner_terms_metreage ?></p>
+								<a href="<?= $banner_link ?>" class="btn">Conheça</a>
+							</div>
+
+							 }*/ ?>
+
+						</div>
+					</div>
+				</div>
+			</a>
+		</li>
 <?php
 
 	foreach ($banner_array as $banner)
@@ -43,7 +105,7 @@ if ($banner_array) { ?>
 
 
 		$banner_title = $banner->post_title;
-		$banner_link = get_bloginfo('url') . '\/imovel/' . $banner->post_name;
+		$banner_link = get_bloginfo('url') . '/imovel/' . $banner->post_name;
 
 		$banner_taxonomies = get_object_taxonomies('listings');
 
@@ -79,7 +141,7 @@ if ($banner_array) { ?>
 	    }
 ?>
 
-
+	
 
 		<li>	
 			<a href="<?php echo $banner_link; ?>">
