@@ -3,16 +3,23 @@
 <div id="content" class="eight columns">
 	 <div class="post-container">
 
-	 	<?php $args = array(
+	 	<?php
+	 	
+	 	if ( get_query_var('paged') ) { $paged = get_query_var('paged'); }
+        elseif ( get_query_var('page') ) { $paged = get_query_var('page'); }
+        else { $paged = 1; }
+
+	 	$args = array(
 			'orderby' => 'date',
 			'order' => 'DESC',
-			'posts_per_page' => '10',
-			);
+			'paged'=>$paged,
+            'posts_per_page'=>10,
+		);
 		?>
-		<?php query_posts($args); ?>
+		<?php $loop = new WP_query($args); ?>
 
-		<?php if(have_posts()): ?>
-			<?php while(have_posts()):the_post(); ?>
+		<?php if($loop->have_posts()): ?>
+			<?php while( $loop->have_posts() ): $loop->the_post(); ?>
 				<div class="post-title">
 					<h1><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
 				</div><!--post-title-->
@@ -41,6 +48,7 @@
 				</div><!--post-contetn-->
 				<?php endif; ?>
 			<?php endwhile;?>
+			<?php wp_reset_postdata(); ?>
 		<?php else: ?>
 			<div class="post-title">
 				<h1>Sua busca não teve nenhum resultado</h1>
@@ -53,11 +61,23 @@
 	 </div><!--post-container-->	 
 	<div class="row page-navigation">
 		<div class="twelve columns">
+
 			<?php 
-				if(function_exists('wp_paginate'))
+				/*if(function_exists('wp_paginate'))
 				{
 			    	wp_paginate();
-				}
+				}*/
+			?>
+
+			<?php
+				$big = 999999999;
+	            $p = array(
+	                'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+	                'format' => '?paged=%#%',
+	                'current' => max( 1, get_query_var('paged') ),
+	                'total' => $loop->max_num_pages
+	            );
+				echo '<div class="navigation">'.paginate_links($p).'</div>';
 			?>
 		</div>
 	</div>	 
