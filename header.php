@@ -121,10 +121,6 @@
         /></noscript>
         <!-- End Facebook Pixel Code -->
 
-        <!--RD-->
-        <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/1f43a906-f1a1-427f-bb5d-30ea68ae49f5-loader.js"></script>
-
-
         <!-- Etc -->
         <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/scripts/app.js"></script>
         <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/scripts/tinynav.js"></script>

@@ -288,6 +288,9 @@ nd of Zopim Live Chat Script-->
 
 <?php //wp_footer(); ?>
 
+<!--RD-->
+<script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/1f43a906-f1a1-427f-bb5d-30ea68ae49f5-loader.js"></script>
+
 </body>
 
 </html>
