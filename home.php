@@ -26,7 +26,7 @@ if ($banner_array) { ?>
 
 <ul class="banners">
 		<li>
-			<a href="http://ibisaruja.com.br">
+			<a href="http://ibisaruja.com.br" target="_blank">
 				<!--Desktop-->
 				<div class="homepage-bg desktop" style="background: url('http://www.ekoconstrutora.com.br/wp-content/uploads/2017/05/banner-min.jpg'); background-size: cover; background-position: center bottom;">
 					<div class="row">
