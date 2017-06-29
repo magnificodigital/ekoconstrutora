@@ -62,6 +62,7 @@
         <!-- Add validate -->
         <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/core.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+        <link rel="stylesheet" href="http://magnificodigital.com/assets/createdby/createdby.css" />
 
         <style type="text/css">
             .zopim {display: none;}

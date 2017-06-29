@@ -108,6 +108,8 @@
 
                 ?>
 
+                <br /><a href="http://magnificodigital.com" target="_blank" class="createdmagnifico"></a>
+
             </div>
 
         </div>
