@@ -1300,8 +1300,14 @@ footer #newsletter p {
 
 footer #newsletter input[type="text"],
 footer #newsletter input[type="email"] {
+    width: 48%;
+    float: left;
     height: 38px;
     background-color: #ffffff;
+}
+
+footer #newsletter input[type="text"] {
+    margin-right: 10px;
 }
 
 footer #newsletter input[type="submit"] {
@@ -1583,6 +1589,12 @@ ul.menu a {
     }
     footer #contact {
         position: relative;
+    }
+
+    footer #newsletter input[type="text"],
+    footer #newsletter input[type="email"] {
+        width: 100%;
+        margin-bottom: 10px;
     }
 
 

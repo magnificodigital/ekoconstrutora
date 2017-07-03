@@ -12,7 +12,7 @@
 
             <div class="row">
 
-                <div class="four columns">
+                <div class="six columns">
 
                     <p>Receba os nossos Newsletters:</p>
 
@@ -26,6 +26,8 @@
 
                     <input type="hidden" name="SMT_RECEBER" value="1" />
 
+                    <input type="text"  name="SMT_name" placeholder="Digite o seu Nome" required/>
+
                     <input type="email"  name="SMT_email" placeholder="Digite o seu E-mail" required/>
 
                 </div>
@@ -36,7 +38,7 @@
 
                 </div>
 
-                <div class="six columns">
+                <div class="four columns">
 
                     <?php
 
@@ -292,6 +294,17 @@ nd of Zopim Live Chat Script-->
 
 <!--RD-->
 <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/1f43a906-f1a1-427f-bb5d-30ea68ae49f5-loader.js"></script>
+
+<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/integration/stable/rd-js-integration.min.js"></script>  
+<script type="text/javascript">
+    var meus_campos = {
+        'SMT_email': 'email',
+        'SMT_name': 'nome'
+     };
+    options = { fieldMapping: meus_campos };
+    RdIntegration.integrate('5bc74d9a15dc71ab1bd0bc162ae544d5', '[EKO CONSTRUTORA] - Box Newsletter', options);  
+</script>
+
 
 </body>
 
