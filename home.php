@@ -141,11 +141,12 @@ if ($banner_array) { ?>
 	    }
 ?>
 
+	<!--
 	
 
 		<li>	
 			<a href="<?php echo $banner_link; ?>">
-				<!--Desktop-->
+				
 				<div class="homepage-bg desktop" style="background: url(<?php echo $banner_image_desktop; ?>); background-size: cover; background-position: center bottom;">
 					<div class="row">
 						<div class="six columns">
@@ -169,7 +170,7 @@ if ($banner_array) { ?>
 			</a>
 
 			<a href="<?php echo $banner_link; ?>">
-				<!--Tablet-->
+				
 				<div class="homepage-bg tablet" style="background: url(<?php echo $banner_image_tablet; ?>); background-size: cover; background-position: center bottom;">
 					<div class="row">
 						<div class="six columns">
@@ -192,7 +193,7 @@ if ($banner_array) { ?>
 			</a>
 
 			<a href="<?php echo $banner_link; ?>">
-				<!--Mobile-->
+				
 				<div class="homepage-bg mobile" style="background: url(<?php echo $banner_image_mobile; ?>); background-size: cover; background-position: center bottom;">
 					<div class="row">
 						<div class="six columns">
@@ -213,6 +214,8 @@ if ($banner_array) { ?>
 				</div>
 			</a>
 		</li>
+
+	-->
 
 <?php
 
