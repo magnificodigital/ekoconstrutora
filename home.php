@@ -88,6 +88,70 @@ if ($banner_array) { ?>
 				</div>
 			</a>
 		</li>
+
+		<li>
+			<a href="http://conteudos.ekoconstrutora.com.br/180-meses" target="_blank">
+				<!--Desktop-->
+				<div class="homepage-bg desktop" style="background: url('http://www.ekoconstrutora.com.br/wp-content/uploads/2017/07/banner_desktop.jpg'); background-size: cover; background-position: center bottom;">
+					<div class="row">
+						<div class="six columns">
+
+							<?php if ($banner->ID === 483 || $banner->ID === 116) /*
+
+
+							<div class="text">
+								<p class="locale"><?= $banner_terms_locale ?></p>
+								<h2><?= $banner_title ?></h2>
+								<p class="room"><?= $banner_terms_rooms ?></p>
+								<p class="metreage"><?= $banner_terms_metreage ?></p>
+								<a href="<?= $banner_link ?>" class="btn">Conheça</a>
+							</div>
+
+							} */ ?>
+
+						</div>
+					</div>
+				</div>
+				<!--Tablet-->
+				<div class="homepage-bg tablet" style="background: url('http://www.ekoconstrutora.com.br/wp-content/uploads/2017/07/tablet.jpg'); background-size: cover; background-position: center bottom;">
+					<div class="row">
+						<div class="six columns">
+
+							<?php /*if ($banner->ID === 483 || $banner->ID === 116) { 
+
+							<div class="text">
+								<p class="locale"><?= $banner_terms_locale ?></p>
+								<h2><?= $banner_title ?></h2>
+								<p class="room"><?= $banner_terms_rooms ?></p>
+								<p class="metreage"><?= $banner_terms_metreage ?></p>
+								<a href="<?= $banner_link ?>" class="btn">Conheça</a>
+							</div>
+
+							} */?>
+
+						</div>
+					</div>
+				</div>
+				<div class="homepage-bg mobile" style="background: url('http://www.ekoconstrutora.com.br/wp-content/uploads/2017/07/mobile-1.jpg'); background-size: cover; background-position: center bottom;">
+					<div class="row">
+						<div class="six columns">
+
+							<?php /*if ($banner->ID === 483 || $banner->ID === 116) { 
+							<div class="text">
+								<p class="locale"><?= $banner_terms_locale ?></p>
+								<h2><?= $banner_title ?></h2>
+								<p class="room"><?= $banner_terms_rooms ?></p>
+								<p class="metreage"><?= $banner_terms_metreage ?></p>
+								<a href="<?= $banner_link ?>" class="btn">Conheça</a>
+							</div>
+
+							 }*/ ?>
+
+						</div>
+					</div>
+				</div>
+			</a>
+		</li>
 <?php
 
 	foreach ($banner_array as $banner)
