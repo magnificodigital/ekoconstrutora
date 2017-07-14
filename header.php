@@ -14,7 +14,8 @@
         <?php 
             $post_id = get_the_ID(); 
             $post = get_post($post_id); 
-            $meta_description = strip_tags($post->post_content);
+            //$meta_description = strip_tags($post->post_content);
+            $meta_description = get_the_excerpt();
             
             if ($tags = get_the_tags($post_id)) {
                 foreach($tags as $tag) {
@@ -25,13 +26,15 @@
             }
         ?>        
         
+        <?php /*
         <meta name=”keywords” content=”<?php echo $meta_tags; ?>” />
+        */?>
         
-        <meta property="og:title" content="<?php bloginfo('name'); ?><?php wp_title(); ?>">
+        <meta property="og:title" content="<?php echo get_the_title(); ?>">
         <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
         <meta property="og:image" content="<?php echo bloginfo('template_directory') . '/images/logo.gif'; ?>">
         <meta property="og:description" content="<?php echo (is_home()) ? bloginfo('description') : $meta_description;?>">
-        <meta name="description" content="<?php echo (is_home()) ? bloginfo('description') : $meta_description;?>">
+        <meta name="description" content="<?php echo (is_home()) ? bloginfo('description') : $meta_description;?>"> 
 
         
         <!--
@@ -452,8 +455,6 @@
 
             });
         </script>
-
-
 
     </head>
     <body <?php //body_class(); ?>>
